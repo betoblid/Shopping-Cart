@@ -1,0 +1,36 @@
+.heading_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 101px;
+    width: 100%;
+    background: #0F52BA;
+
+    h1 { font: 600 40px 'Montserrat', sans-serif; color: white; }
+
+    h1 span { font: 300 20px 'Montserrat', sans-serif; }
+
+    button {
+        width: 90px;
+        height: 45px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 469px) {
+    .heading_logo {  
+        height: 50px;
+    
+        h1 {   font-size: 32px; }
+
+        h1 span {  font-size: 16px;}
+
+        button {
+            width: 52px;
+            height: 26px;
+        }
+    }
+
+}

@@ -1,0 +1,157 @@
+.container-produto-venda {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #FFFFFF;
+    width: calc(100% - 15%);
+    height: 101px;
+    position: relative;
+    border-radius: 8px;
+    padding: 0;
+
+    .btn-close {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        border: none;
+        background: none;
+        font-size: 20px;
+    }
+
+    img {
+        width: 50px;
+        height: 51px;
+    }
+
+    .box-info-produto-compra {
+        width: 113px;
+        color: #2C2C2C;
+        font: 400 13px 'Montserrat';
+        text-align: left;
+
+
+
+    }
+
+    .box-qtn-produto {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+
+        div {
+            p {
+                width: 12px;
+                height: 7px;
+                color: black;
+                font: 400 7px 'Montserrat';
+                text-align: left;
+            }
+
+            .btn-qtn-produto {
+                border: 0.3px solid #BFBFBF;
+                border-radius: 8px;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+
+                button {
+                    border: none;
+                    background: none;
+                    font: 400 13px 'Montserrat';
+
+
+                }
+
+                span {
+
+                    font: 400 9px 'Montserrat';
+                    border-inline: 0.2px solid #BFBFBF;
+                    padding-inline: 4px;
+
+
+                }
+            }
+        }
+
+        .box-valor {
+
+            h3 {
+                font-family: Montserrat;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 17px;
+                letter-spacing: 0px;
+                text-align: left;
+
+            }
+        }
+    }
+
+}
+
+@media(max-width: 569px) {
+
+    .container-produto-venda {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: calc(100% - 10%);
+        height: 180px;
+
+        .btn-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+
+        .box-info-produto-compra {
+            width: auto;
+            font: 400 16px 'Montserrat';
+            text-align: center;
+        }
+
+        .box-qtn-produto {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 80%;
+
+            div {
+                p {
+                    display: none;
+                }
+
+                .btn-qtn-produto {
+                    border: 1px solid #BFBFBF;
+                    width: 97px;
+
+                    button {
+                        font-size: 22px;
+                    }
+
+                    span {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+
+        .box-valor {
+
+            h3 {
+                font-size: 15px;
+            }
+        }
+    }
+}
