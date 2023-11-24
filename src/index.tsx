@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './Global.scss';
-import reportWebVitals from './reportWebVitals';
-
 import { QueryClient, QueryClientProvider } from "react-query";
 import Provaider from './Context/ProductsContext';
 import Rout from './Route';
 
-const queryclient = new QueryClient()
+const queryclient = new QueryClient();
+
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('view') as HTMLElement
 );
 root.render(
   <React.StrictMode>
@@ -22,5 +21,3 @@ root.render(
 
   </React.StrictMode>
 );
-
-reportWebVitals();
