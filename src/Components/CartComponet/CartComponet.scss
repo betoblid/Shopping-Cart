@@ -8,13 +8,26 @@
     right: 0;
     z-index: 1;
 
+    .box_info-card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 50px;
+
+        h2{
+            display: flex;
+            align-items: center;
+            
+        }
+    }
+
     .box_info-card {
 
         .info-card {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            padding: 15px 0;
+            padding: 0;
 
             h2 {
                 font: 700 27px 'Montserrat';
@@ -36,30 +49,28 @@
 
     }
 
-    .centro {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-        height: 60%;
-        overflow-x: auto;
+    .container-products {
+        height: 70%;
+        width: 96%;
+        overflow: auto;
+        padding-top: 7px;
+        margin: 0 auto;
+
+
     }
-
-
-
 
     /* div com informações de valr de compra */
     .box-info-compra {
         position: absolute;
         bottom: 0;
         width: 100%;
+        background: #0F52BA;
 
         .info-compra {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 20px 50px;
+            justify-content: space-between;
+            padding: 10px 50px;
 
             h3,
             span {
@@ -70,7 +81,8 @@
 
         .btn-compra {
             width: 100%;
-            height: 90px;
+            height: auto;
+            padding-block: 10px;
             font: 700 28px 'Montserrat';
             text-align: center;
             background: black;
@@ -79,53 +91,51 @@
             cursor: pointer;
         }
     }
+
+
+
 }
 
 
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 50px;
-}
+@media(max-width: 388px) {
 
-@media(max-width: 569px) {
-    .row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-    }
 
     .card_carrinho {
         width: 90%;
 
+        .box_info-card{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .box_info-card {
-
-            div {
-
+            padding: 10px 20px;
+            .info-card {
                 h2 {
+                    width: auto;
                     font-size: 20px;
                 }
             }
-
-            div {
+            .btn-cart {
                 button {
-                    font-size: 30px;
+                    font-size: 34px;
                 }
             }
         }
 
+        .container-products {
+            height: 76%;
+            
+        }
+
         /* div com informações de valr de compra */
         .box-info-compra {
-            position: absolute;
-            bottom: 0;
+
             width: 100%;
 
             .info-compra {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                padding: 5px 10px;
 
                 h3,
                 span {
@@ -145,14 +155,67 @@
 
 }
 
+@media(min-width: 389px) and (max-width: 569px) {
+
+
+    .card_carrinho {
+        width: 90%;
+
+        .box_info-card{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box_info-card {
+            padding: 10px 20px;
+            .info-card {
+                h2 {
+                    width: auto;
+                    font-size: 20px;
+                }
+            }
+            .btn-cart {
+                button {
+                    font-size: 34px;
+                }
+            }
+        }
+
+        .container-products {
+            height: 76%;
+            
+        }
+
+        /* div com informações de valr de compra */
+        .box-info-compra {
+
+            width: 100%;
+
+            .info-compra {
+                padding: 5px 20px;
+
+                h3,
+                span {
+                    font-size: 28px;
+                }
+
+            }
+
+
+            .btn-compra {
+                height: 50px;
+                font-size: 18px;
+            }
+        }
+    }
+
+
+}
+
 
 @media(min-width: 569px) and (max-width: 900px) {
-    .row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 50px;
-    }
+
 
     .card_carrinho {
         width: 60%;
@@ -172,12 +235,14 @@
             }
         }
 
-        
+        .container-products {
+            height: 76%;
+            
+        }
 
         /* div com informações de valr de compra */
         .box-info-compra {
-            position: absolute;
-            bottom: 0;
+
             width: 100%;
 
             div {
@@ -197,16 +262,16 @@
 
     }
 
-    
+
 
 }
-@media(min-width: 900px) and (max-width: 1180px){
-    .card_carrinho{
 
-        .centro {
+@media(min-width: 900px) and (max-width: 1180px) {
+    .card_carrinho {
 
-            height: 50%;
- 
+        .container-products {
+            height: 76%;
+            
         }
     }
 }

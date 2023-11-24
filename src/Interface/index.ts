@@ -15,12 +15,22 @@ export type Products = {
     price: string
 
 }
+export type ProductsCart = {
+    qtn: number
+    id: number,
+    name: string,
+    description: string,
+    photo: string,
+    price: string,
+   
+
+}
 export type TypeProvaider = {
 
     products: Products[]
     setProducts: React.Dispatch<React.SetStateAction<Products[]>>
-    cartiten: Products[]
-    setCartIten: React.Dispatch<React.SetStateAction<Products[]>>
+    cartiten: ProductsCart[]
+    setCartIten: React.Dispatch<React.SetStateAction<ProductsCart[]>>
     cart: boolean,
     setCart: React.Dispatch<React.SetStateAction<boolean>>
 

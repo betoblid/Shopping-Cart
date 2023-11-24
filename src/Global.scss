@@ -4,3 +4,11 @@
   padding: 0;
   margin: 0;
 }
+
+::-webkit-scrollbar{
+  background-color: #0F52BA;
+  width: 3px;
+}
+::-webkit-scrollbar-thumb{
+  background: #ffffff;
+}

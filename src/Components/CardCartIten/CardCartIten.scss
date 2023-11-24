@@ -3,11 +3,12 @@
     align-items: center;
     justify-content: space-around;
     background: #FFFFFF;
-    width: calc(100% - 15%);
+    width: 96%;
     height: 101px;
     position: relative;
     border-radius: 8px;
     padding: 0;
+    margin: 0 auto 7px auto;
 
     .btn-close {
         position: absolute;
@@ -38,7 +39,6 @@
         align-items: center;
         justify-content: space-around;
         gap: 10px;
-
         div {
             p {
                 width: 12px;
@@ -55,7 +55,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-                gap: 10px;
+               
 
                 button {
                     border: none;

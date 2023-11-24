@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardProduct.scss";
 import { BiCalendarAlt } from "react-icons/bi";
-import { ArrayProduct } from "../../Interface";
+import { ArrayProduct, ProductsCart } from "../../Interface";
 import { useProvaider } from "../../Context/UserProvaider";
 import { FormatCurry } from "../../Utils";
 
@@ -12,8 +12,45 @@ const CardProduct = ({ data }: ArrayProduct) => {
     //desestrutura um objeto e passa as informações para o card
     const { description, id, name, photo, price } = data;
     //function que adiciona nosso produto dentro do hook cartinten
-    const HandleAddCart = () => setCartIten([...cartiten, data]);
+    //const HandleAddCart = () => setCartIten([...cartiten, data]);
 
+
+    const HandleAddCartProduct = (id: number) => {
+        //verificar se existe
+        const checkExit = cartiten.find((iten) => iten.id === id)
+        //condição caso existe
+        if (checkExit) {
+            //nova lista acrecentando mais produtos
+            const NewsData = cartiten.map((item) => {
+
+                if (item.id === id) {
+                    return {
+                        ...item,
+                        qtn: ++item.qtn
+                    }
+                }
+                return item
+            })
+            setCartIten(NewsData)
+            return;
+        }
+        //newData percorre o array e retorna com um valor novo qtn onde será manipulado quantos produtos
+        const newData: ProductsCart[] = [data].map((item) => {
+            return {
+                ...item,
+                qtn: 0
+            }
+        })
+        //adiciona mais um produto no carrinho
+        const QtnAddNew = newData.map((iten) => {
+
+            iten.qtn++
+            return {
+                ...iten,
+            }
+        })
+        setCartIten([...cartiten, QtnAddNew[0]])
+    }
     return (
         <section className="card-products-venda" id={String(id)}>
             <figure>
@@ -38,7 +75,7 @@ const CardProduct = ({ data }: ArrayProduct) => {
             </div>
             <button
                 className="btn-comprar"
-                onClick={() => HandleAddCart()}
+                onClick={() => HandleAddCartProduct(id)}
             > <BiCalendarAlt />
                 Comprar
             </button>

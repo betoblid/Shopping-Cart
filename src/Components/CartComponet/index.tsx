@@ -4,11 +4,16 @@ import { useProvaider } from "../../Context/UserProvaider";
 import { FormatCurry } from "../../Utils";
 import CardIten from "../CardCartIten";
 
+
+
+
 const CartComponet = () => {
 
     const { setCart, cartiten } = useProvaider();
 
-    const TotalCompra = cartiten.reduce((acc, iten) => { return Number(iten.price) + acc }, 0);
+
+
+    const TotalCompra = cartiten.reduce((acc, iten) => { return acc + (Number(iten.price) * iten.qtn) }, 0);
     return (
         <div className="card_carrinho">
             <div className="box_info-card row">
@@ -23,10 +28,10 @@ const CartComponet = () => {
                 </div>
             </div>
 
-            <div className="centro">
+            <div className="container-products">
 
-                {cartiten.map((items) => <CardIten key={items.id} data={items} />)}
-
+                {cartiten.map((item) =>  <CardIten key={item.name} data={item} />)}
+        
             </div>
 
             <div className="box-info-compra">
